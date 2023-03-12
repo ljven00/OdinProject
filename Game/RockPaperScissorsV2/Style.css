@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap');
+
+
+body{
+    font-family: Quicksand;
+    background-color:azure;
+    box-sizing: border-box;
+}
+
+header{
+    text-align: center;
+    font-size: 1.5em;
+    color: lightcoral;
+}
+
+main, .container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container{
+    border: 2px solid lightblue;
+    border-radius: 40px;
+    width: 40vw;
+    max-width: 500px;
+    background-color: white;
+}
+
+.container.game{
+    height: 50vh;
+    max-height: 400px;
+}
+
+.container.score{
+    height: 15vh;
+    max-height: 200px;
+}
+
+.message, .score{
+    gap: 0px;
+}
+
+/*button*/
+.game_item{
+    background-color: lightcoral;
+    color: azure;
+    width: 20vw;
+    max-width: 300px;
+    height: 10vh;
+    max-height: 90px;
+    border-radius: 50px;
+    border: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    box-shadow: 2px 5px 2px rgba(111, 117, 119, 0.5);
+}
+
+.game_item:hover{
+    cursor: pointer;
+    background-color: lightblue;
+    font-weight: 600;
+    width: 22vw;
+    height: 11vh;
+    color: white;
+}
+
+.message{
+    visibility: hidden;
+}
+.userscore, .computer_score{
+    color: lightcoral;
+}
+
+
+
