@@ -20,6 +20,7 @@
 }
 
 header{
+    font-size: 2.5vw;
     display: flex;
     justify-content: space-around;
     height: 30px;
@@ -39,9 +40,13 @@ h1{
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
+    flex-wrap: wrap;
 }
 
 .recipe_nav ul{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
     justify-content: space-around;
 }
 
