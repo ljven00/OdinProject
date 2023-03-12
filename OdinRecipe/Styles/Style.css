@@ -77,3 +77,7 @@ em{
     color: rgb(97, 138, 97);
 }
 
+main>ol, main>ul, main>p{
+    border-bottom: 1px solid rgb(149, 202, 149);
+}
+
