@@ -16,7 +16,12 @@ item.forEach((button) => button.addEventListener("click", play));
 
 alert(`Welcome to ${title}`)
 
-username.textContent = prompt("Please enter your name: ")
+let input = prompt("Please enter your name: ")
+
+if (input === "" || input === null)
+    username.textContent = "User";
+else
+    username.textContent = input;
 
 
 /*
