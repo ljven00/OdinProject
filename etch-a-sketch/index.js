@@ -1,3 +1,5 @@
+let n = 20; // nbr of squares
+const container = document.getElementsByClassName("container");
 
 let mouseDown = false;
 
@@ -26,3 +28,5 @@ function randomColor() {
 function getRand() {
     return Math.floor(Math.random() * 256);
 }
+
+//console.log(randomColor())

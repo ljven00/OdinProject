@@ -3,16 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/svg">
+    <link rel="stylesheet" href="index.css">
     <title>Sketch</title>
 </head>
 <body>
-    <header>
+    <header class="head">
         <h1>Let's etch a Sketch</h1>
     </header>
-    <main>
-        <div class="container">
-            
+    <main class="sketch">
+        <div>
+            <label for="size" id="size-label">24 x 24</label><br>
+            <input type="range" name="size" id="size" min="0" max="100">
         </div>
+        <section class="container">
+
+        </section>
+        <section class="menu">
+            <input type="color" name="color" id="color">
+            <button id="btn-color">Color</button>
+            <button id="btn-random">Random</button>
+            <button id="btn-rain">Rainbow</button>
+            <button id="btn-rain-stop">Stop Rain</button>
+            <button id="btn-clear">Clear</button>
+            <button id="btn-reset">Reset</button>
+        </section>
     </main>
     <noscript>Enable JavaScript to see the page</noscript>
     <script src="index.js"></script>
