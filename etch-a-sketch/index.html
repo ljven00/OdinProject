@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@400;600;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d042d36122.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="assets/logo.svg" type="image/svg">
     <link rel="stylesheet" href="index.css">
     <title>Sketch</title>
@@ -15,7 +16,7 @@
         <h1>Let's etch a Sketch</h1>
     </header>
     <main class="sketch">
-        <div>
+        <div class="range">
             <label for="size" id="size-label">24 x 24</label><br>
             <input type="range" name="size" id="size" min="1" max="100" value="24">
         </div>
@@ -32,6 +33,27 @@
             <button class="btn" id="btn-reset">Reset</button>
         </section>
     </main>
+    <aside>
+        <div class="info">?</div>
+        <div class="instructions">
+            <span class="close-info">X</span>
+            <h2>Welcome!</h2>
+            <p>The game is very simple. There is a menu on the right for you to choose the option to play.</p> 
+            Click
+            <ul>
+                <li><strong>Color</strong> for a specific color</li>
+                <li><strong>Random</strong> for random colors</li>
+                <li><strong>Rain</strong> for random automatic filling</li>
+                <li><strong>Stop Rain</strong> to pause random filling</li>
+                <li><strong>Clear</strong> to erase</li>
+                <li><strong>Reset</strong> for blank</li>
+            </ul>
+            <p>Happy drawing!</p>
+        </div>
+    </aside>
+    <footer>
+        <address>&copy; 2023 ljven <a href="https://github.com/ljven00"><i class="fa-brands fa-github"></i></a></address>
+    </footer>
     <noscript>Enable JavaScript to see the page</noscript>
     <script src="index.js"></script>
 </body>

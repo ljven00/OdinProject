@@ -3,10 +3,14 @@ const container = document.querySelector(".container");
 const size = document.getElementById("size");
 const sizeLabel = document.getElementById("size-label");
 let mouseDown = false;
+const info = document.querySelector(".info");
+const closeBtn = document.querySelector(".close-info");
 const colorEl = document.getElementById("color");
+const instructions = document.querySelector(".instructions");
 let currentColor = colorEl.value;
 let timerID;
 let squares;
+
 /**
  * this array contains five buttons
  * buttons[0] Color
@@ -17,6 +21,17 @@ let squares;
  * buttons[5] Reset
  */
 const buttons = document.querySelectorAll(".btn");
+
+info.addEventListener("click", ()=> {
+    instructions.style.animation = `quick-animation 1s linear`;
+    instructions.style.display = "block";
+    instructions.style.opacity = "1";
+});
+
+closeBtn.addEventListener("click", ()=> {
+    instructions.style.opacity = "0";
+    instructions.style.display = "none";
+});
 
 window.addEventListener("mousedown", () => {
     mouseDown = true;
@@ -30,11 +45,11 @@ colorEl.addEventListener("input", (e)=> {
     currentColor = e.target.value;
 });
 
+// toggle active button
 buttons.forEach(button => {
   button.addEventListener('click', () => {
     // Remove "active" class from all buttons
     buttons.forEach(btn => btn.classList.remove('active'));
-    
     // Add "active" class to the clicked button
     button.classList.add('active');
   });
@@ -43,11 +58,11 @@ buttons.forEach(button => {
 
 createSquares(n); // creating grid
 
-buttons[2].addEventListener("click", rain);
-buttons[3].addEventListener("click", stopRain);
-buttons[5].addEventListener("click", ()=> createSquares(n)); // resetting the grid
+buttons[2].addEventListener("click", rain); // initiates rain
+buttons[3].addEventListener("click", stopRain); // stops rain
+buttons[5].addEventListener("click", ()=> createSquares(n)); // resets the grid
 
-// setting the size label on input
+// sets the size label on input
 size.addEventListener("input", (e)=> {
     n = e.target.value;
     sizeLabel.textContent = `${n} x ${n}`;
@@ -99,7 +114,7 @@ function createSquares(val) {
  * takes an element espcially a grid cell
  * parses for the selected button from the menu
  * then takes the appropriate actions which can be
- * setting color, reset, clear, start or stop rainbow
+ * setting color, random, clear
  * @param {HTMLElement} square 
  */
 function parsingButtons(square) {
@@ -109,12 +124,6 @@ function parsingButtons(square) {
     else if(buttons[1].classList.contains("active")){
         square.style.backgroundColor = randomColor();
     }
-    // else if(buttons[2].classList.contains("active")){
-    //     rain();
-    // }
-    // else if(buttons[3].classList.contains("active")){
-    //     clearInterval(timerID);
-    // }
     else if(buttons[4].classList.contains("active")){
         square.style.backgroundColor = "transparent";
     }
@@ -136,6 +145,7 @@ function squareEvent(){
     });
 }
 
+// fill random cells with random colors
 function rain(){
     let rand;
     timerID = setInterval(()=> {
@@ -144,6 +154,7 @@ function rain(){
     }, 250)
 }
 
+// stop rain by killing the timerID
 function stopRain(){
     clearInterval(timerID);
 }
