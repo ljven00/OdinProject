@@ -148,8 +148,11 @@ function squareEvent(){
             }
         });
     square.addEventListener("touchenter", ()=> {
-            if(mouseDown){
-                parsingButtons(square);
+            square.addEventListener("touchmove", (e)=> {
+                e.preventDefault();
+                if(mouseDown){
+                    parsingButtons(square);
+                }
             }
         })
         square.addEventListener("click", ()=> {
