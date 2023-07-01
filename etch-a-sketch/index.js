@@ -146,6 +146,11 @@ function squareEvent(){
             if(mouseDown){
                 parsingButtons(square);
             }
+        });
+    square.addEventListener("touchenter", ()=> {
+            if(mouseDown){
+                parsingButtons(square);
+            }
         })
         square.addEventListener("click", ()=> {
             parsingButtons(square);
