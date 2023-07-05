@@ -1,8 +1,8 @@
-let n = 20; // nbr of squares
-const container = document.getElementsByClassName("container");
-
+let n = 24; // nbr of squares
+const container = document.querySelector(".container");
+const size = document.getElementById("size");
+const sizeLabel = document.getElementById("size-label");
 let mouseDown = false;
-
 const info = document.querySelector(".info");
 const closeBtn = document.querySelector(".close-info");
 const colorEl = document.getElementById("color");
@@ -73,18 +73,19 @@ size.addEventListener("input", (e)=> {
  * @returns a random color in rgba form
  */
 function randomColor() {
-    let red = getRand();
-    let green = getRand();
-    let blue = getRand();
+    let red = getRand(256);
+    let green = getRand(256);
+    let blue = getRand(256);
     let alpha = Math.random().toFixed(2);
     return `rgba(${red}, ${green}, ${blue}, ${alpha})`;
 }
 
 /**
- * @returns an integer between 0 and 255
+ * @param {number} n 
+ * @returns an integer between 0 and n
  */
-function getRand() {
-    return Math.floor(Math.random() * 256);
+function getRand(n) {
+    return Math.floor(Math.random() * n);
 }
 
 /**

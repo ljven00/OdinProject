@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Ysabeau Infant', sans-serif;
     background: #ddd;
+    color: #555;
 }
 
 * {
@@ -22,6 +23,8 @@ body {
 }
 
 .container {
+    display: grid;
+    grid-template: repeat(24, 1fr) / repeat(24, 1fr);
     width: 340px;
     aspect-ratio: 1 / 1;
     max-height: 550px;
@@ -53,29 +56,21 @@ button {
     cursor: pointer;
     border: none;
     background-color: #fff;
+    color: #555;
     border-radius: .25rem;
-    font: 300 1.1rem 'Ysabeau Infant', sans-serif;
+    font: 600 1.1rem 'Ysabeau Infant', sans-serif;
     box-shadow: 0 1px 3px #555;
     padding-block: .35rem;
 }
 
-button:hover {
+button:not(.active):hover {
     background-color: #fef9de;
 }
 
+
 input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    color: #555;
     cursor: pointer;
-    width: 18rem;
-  }
-
-
-input[type="range"]::-webkit-slider-runnable-track {
-    background: #fff;
-    height: 0.4rem;
-    
+    accent-color: #f6de56;
 }
 
 .active {
@@ -180,8 +175,5 @@ footer a {
         display: none;
         opacity: 0;
     }
-}    
-input[type="range"]::-moz-range-track {
-    background: #fff;
-    height: 0.4rem;
+    
 }
