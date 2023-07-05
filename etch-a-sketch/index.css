@@ -78,7 +78,6 @@ input[type="range"]::-webkit-slider-runnable-track {
     
 }
 
-<<<<<<< HEAD
 .active {
     background-color: #f6de56;
 }
@@ -181,10 +180,8 @@ footer a {
         display: none;
         opacity: 0;
     }
-    
-=======
+}    
 input[type="range"]::-moz-range-track {
     background: #fff;
     height: 0.4rem;
->>>>>>> parent of 5a08562 (Complete javascript file)
 }
