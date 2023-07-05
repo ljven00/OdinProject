@@ -37,15 +37,7 @@ window.addEventListener("mousedown", () => {
     mouseDown = true;
 });
 
-window.addEventListener("touchstart", () => {
-    mouseDown = true;
-});
-
 window.addEventListener("mouseup", () => {
-    mouseDown = false;
-});
-
-window.addEventListener("touchend", () => {
     mouseDown = false;
 });
 
@@ -145,14 +137,6 @@ function squareEvent(){
         square.addEventListener("mouseover", ()=> {
             if(mouseDown){
                 parsingButtons(square);
-            }
-        });
-    square.addEventListener("touchenter", ()=> {
-            square.addEventListener("touchmove", (e)=> {
-                e.preventDefault();
-                if(mouseDown){
-                    parsingButtons(square);
-                }
             }
         })
         square.addEventListener("click", ()=> {

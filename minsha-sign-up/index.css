@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff url(assets/bg.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100vw; */
+    height: 100vh;
+    margin: 0;
+}
+
+.sign-up {
+    width: 80%;
+    min-width: 320px;
+    max-width: 600px;
+    height: 400px;
+    background-color: #F2D8EB;
+}
+
+.credit {
+    position: fixed;
+    bottom: .2rem;
+    text-align: center;
+    width: 100%;
+}
+
+@media only screen and (min-width: 640px)  {
+    body {
+        background: #fff url(assets/bg.jpg) no-repeat;
+    }
+}
