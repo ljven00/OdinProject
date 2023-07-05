@@ -1,8 +1,8 @@
-let n = 24; // nbr of squares
-const container = document.querySelector(".container");
-const size = document.getElementById("size");
-const sizeLabel = document.getElementById("size-label");
+let n = 20; // nbr of squares
+const container = document.getElementsByClassName("container");
+
 let mouseDown = false;
+<<<<<<< HEAD
 const info = document.querySelector(".info");
 const closeBtn = document.querySelector(".close-info");
 const colorEl = document.getElementById("color");
@@ -21,6 +21,8 @@ let squares;
  * buttons[5] Reset
  */
 const buttons = document.querySelectorAll(".btn");
+=======
+>>>>>>> parent of 5a08562 (Complete javascript file)
 
 info.addEventListener("click", ()=> {
     instructions.style.animation = `quick-animation 1s linear`;
@@ -41,6 +43,7 @@ window.addEventListener("mouseup", () => {
     mouseDown = false;
 });
 
+<<<<<<< HEAD
 colorEl.addEventListener("input", (e)=> {
     currentColor = e.target.value;
 });
@@ -69,25 +72,27 @@ size.addEventListener("input", (e)=> {
     createSquares(n);
 });
 
+=======
+>>>>>>> parent of 5a08562 (Complete javascript file)
 /**
  * @returns a random color in rgba form
  */
 function randomColor() {
-    let red = getRand(256);
-    let green = getRand(256);
-    let blue = getRand(256);
+    let red = getRand();
+    let green = getRand();
+    let blue = getRand();
     let alpha = Math.random().toFixed(2);
     return `rgba(${red}, ${green}, ${blue}, ${alpha})`;
 }
 
 /**
- * @param {number} n 
- * @returns an integer between 0 and n
+ * @returns an integer between 0 and 255
  */
-function getRand(n) {
-    return Math.floor(Math.random() * n);
+function getRand() {
+    return Math.floor(Math.random() * 256);
 }
 
+<<<<<<< HEAD
 /**
  * creates a val x val div elements with class square
  * then set the innerHTML of the container to the new 
@@ -158,3 +163,6 @@ function rain(){
 function stopRain(){
     clearInterval(timerID);
 }
+=======
+//console.log(randomColor())
+>>>>>>> parent of 5a08562 (Complete javascript file)
